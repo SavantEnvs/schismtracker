@@ -1,0 +1,9 @@
+project: savantenvs/schismtracker
+target: fuzz_load_song
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_load_song/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_load_song
+    libfuzzer: true
+    timeout: 30
